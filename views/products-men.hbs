@@ -1,0 +1,28 @@
+<div class="main-content-products flexed-item big-container">
+
+    {{!-- CATEGORY --}}
+    <aside class="tag-wrapper">
+        <h4 class="tag-title">All Tags</h4>
+        <ul id="tag_list" class="tag-list" data-category="{{category}}">
+            {{#each tags}}
+            <li class="tag-list-item">
+                {{#compare category "collection" operator="!="}}
+                {{category}}
+                {{/compare}}
+                Men's collection <span id="products_count" class="products-count">({{products.length}})</span>
+            </h4>
+            <p class="products-subtitle">Prepare for your miles with the latest styles and colors of men's running
+                shoes.
+                Take advantage of signature a footwear technologies including Zoom, Flyknite, and find the pairs running
+                shoes that align with your running philosophy.</p>
+        </div>
+        {{#unless products}}
+        <p>Sorry, no sneakers yet !</p>
+        {{/unless}}
+        <div id="products_grid" class="products-grid flexed-item">
+            {{#each products}}
+            {{> sneaker_mini }}
+            {{/each}}
+        </div>
+   </section>
+</div>

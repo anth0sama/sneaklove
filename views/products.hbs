@@ -1,6 +1,4 @@
-<div class="main-content-products flexed-item big-container">
-
-  {{!-- CATEGORY --}}
+   {{!-- CATEGORY --}}
   <aside class="tag-wrapper">
     <h4 class="tag-title">All Tags</h4>
     <ul id="tag_list" class="tag-list" data-category="{{category}}">
@@ -12,7 +10,6 @@
       {{/each}}
     </ul>
   </aside>
-
   {{!-- PRODUCTS--}}
   <section class="products-wrapper">
     <div class="products-infos">
@@ -23,19 +20,17 @@
         {{#compare category "collection" operator="!="}}
         {{category}}
         {{/compare}}
-        collection <span id="products_count" class="products-count">({{sneakers.length}})</span>
+        collection <span id="products_count" class="products-count">({{products.length}})</span>
       </h4>
-      <p class="products-subtitle">Prepare for your miles with the latest styles and colors of women’s running shoes.
+      <p class="products-subtitle">Prepare for your miles with the latest styles and colors of running shoes.
         Take advantage of signature a footwear technologies including Zoom, Flyknite, and find the
         pairs running shoes that align with your running philosophy.</p>
     </div>
-    {{#unless sneakers}}
+    {{#unless products}}
     <p>Sorry, no sneakers yet !</p>
     {{/unless}}
     <div id="products_grid" class="products-grid flexed-item">
-      {{#each sneakers}}
+      {{#each products}}
       {{> sneaker_mini }}
       {{/each}}
     </div>
-  </section>
-</div>
