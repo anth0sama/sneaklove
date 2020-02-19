@@ -13,7 +13,8 @@
     "express-session": "^1.16.2",
     "hbs": "^4.1.0",
     "mongoose": "^5.9.1",
-    "multer-storage-cloudinary": "^2.2.1"
+    "multer-storage-cloudinary": "^2.2.1",
+    "stack": "^0.1.0"
   },
   "devDependencies": {},
   "scripts": {
